@@ -41,35 +41,35 @@ function CalculateClick(){
 
     let row = table.insertRow();
     let cell1 = row.insertCell();
+    cell1.style.textAlign = "left";
     cell1.innerHTML = "Сумма ежемесячного платежа: ";    
     let cell2 = row.insertCell();
     cell2.style.textAlign = "right";
-    cell2.style.color = "white";
     cell2.innerHTML = Math.round(monthly_payment,2);
     
     let row2 = table.insertRow();
     let cell3 = row2.insertCell();
+    cell3.style.textAlign = "left";
     cell3.innerHTML = "Переплата: " ;
     let cell4 = row2.insertCell();
     cell4.style.textAlign = "right";
-    cell4.style.color = "white";
     cell4.innerHTML = Math.round(monthly_payment,2)* credit_time - credit_amount;
         
     let row3 = table.insertRow();
     let cell5 = row3.insertCell();
+    cell5.style.textAlign = "left";
     cell5.innerHTML = "Итоговая переплата за весь период: ";
     let cell6 = row3.insertCell();
     cell6.style.textAlign = "right";
-    cell6.style.color = "white";
     cell6.innerHTML = ((Math.round(monthly_payment, 2) * credit_time * 100) / credit_amount - 100).toFixed(2) + "%";
 
     let row4 = table.insertRow();
     let cell7 = row4.insertCell();
+    cell7.style.textAlign = "left";
     cell7.innerHTML = "Полная стоимость кредита, годовых: ";
     let cell8 = row4.insertCell();
     cell8.style.textAlign = "right";
-    cell8.style.color = "white";
-    cell8.innerHTML = ((Math.round(monthly_payment, 2) * credit_time * 100) / credit_amount - 100).toFixed(2) / (credit_time / 12) + "%";
+    cell8.innerHTML = (((Math.round(monthly_payment, 2) * credit_time * 100) / credit_amount - 100) / (credit_time / 12)).toFixed(2) + "%";
     output.innerHTML = "ИТОГО:";
     output.appendChild(table);
     CreateTable(credit_amount, monthly_payment, credit_time, interest_rate)
