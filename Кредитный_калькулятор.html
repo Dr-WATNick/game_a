@@ -210,17 +210,36 @@
 		</div>
 	</form>	
 	<div class="container-fluid frame tbl">
-				<div class="row row-cols-12">
-					<div class="row vert-spacer"></div>
-					<div class="row vert-spacer"></div>
-					<div class="row position-relative">
-						<div class="output">
+		<div class="row row-cols-12">
+			<div class="row vert-spacer"></div>
+			<div class="row vert-spacer"></div>
+			<div class="row position-relative">
+				<div class="col-4 col-text"> </div>
+				<div class="col-4">
+					<div class="output">
   
-						</div>
 					</div>
 				</div>
+				<div class="col-4"> </div>
 			</div>
-			<div id="payment-table" style="height:600px ; width: 750px;" class="ag-theme-alpine"></div>
+			<div class="row vert-spacer"></div>
+		</div>
+	</div>
+	<div id="payment-table" style="height:600px ; width: 750px;" class="ag-theme-alpine"></div>
 </body>
 </html>
 
+<div class="row">
+<div class="col-4 col-text">
+<label class="text">Вид платежа:</label>
+</div>
+<div class="col-4">
+<select class="form-select" id="payment-type">
+<option selected>аннуитетный</option>
+<option value="1">дифференцированный</option>
+</select>
+</div>
+<div class="col-4">
+</div>
+</div>
+<div class="row vert-spacer"></div>
