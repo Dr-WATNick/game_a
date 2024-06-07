@@ -37,10 +37,10 @@
 							<label class="text">Cумма кредита:</label>
 						</div>
 						<div class="row">
-							<div class="col-xxl-10">
+							<div class="col-10">
 								<input type="number" class="form-control" id="credit-amount" value ="300000">
 							</div>
-							<div class="col-xxl-2">
+							<div class="col-2">
 								<select class="form-select" id="currency-select">
 									<option value="Rub"selected>&#8381;</option>
 									<option value="Do">&#36;</option>
@@ -53,10 +53,10 @@
 							<label class="text">Срок кредита:</label>
 						</div>
 						<div class="row">
-						<div class="col-xxl-10">
+						<div class="col-10">
 							<input type="number" class="form-control" id="credit-time" value ="24">
 						</div>
-						<div class="col-xxl-2">
+						<div class="col-2">
 							<select class="form-select" id="credit-time-select">
 								<option value="year" selected>лет</option>
 								<option value="month">мес.</option>
@@ -68,10 +68,10 @@
 							<label class="text">Процентная ставка:</label>
 						</div>
 						<div class="row">
-						<div class="col-xxl-10">
+						<div class="col-10">
 							<input type="number" class="form-control" id="interest-rate" value="8.5">
 						</div>
-						<div class="col-xxl-2">
+						<div class="col-2">
 							<select class="form-select" id="interest-rate-select">
 								<option value="year"selected>% в год</option>
 								<option value="month">% в месяц</option>
@@ -97,10 +97,10 @@
 										<label class="text">Первоначальный взнос:</label>
 									</div>
 									<div class="row">
-										<div class="col-xxl-10">
+										<div class="col-10">
 											<input type="number" class="form-control" id="initial-payment">
 										</div>
-										<div class="col-xxl-2">
+										<div class="col-2">
 											<select class="form-select" id="initial-payment-select">
 												<option selected>&#8381;</option>
 												<option value="1">% от суммы кредита</option>
@@ -112,10 +112,10 @@
 										<label class="text">Единовременные комиссии:</label>
 									</div>
 									<div class="row">
-										<div class="col-xxl-10">
+										<div class="col-10">
 											<input type="number" class="form-control" id="money-value">
 										</div>
-										<div class="col-xxl-2">
+										<div class="col-2">
 											<select class="form-select" id="cred-time">
 												<option selected>% от суммы кредита</option>
 												<option value="1">&#8381;</option>
@@ -127,10 +127,10 @@
 										<label class="text">Ежемесячные комиссии:</label>
 									</div>
 									<div class="row">
-										<div class="col-xxl-10">
+										<div class="col-10">
 											<input type="number" class="form-control" id="one-time-fee">
 										</div>
-										<div class="col-xxl-2">
+										<div class="col-2">
 											<select class="form-select" id="one-time-fee-select">
 												<option selected>% от суммы кредита</option>
 												<option value="1">% от остатка долга</option>
@@ -140,25 +140,25 @@
 									</div>
 									<div class="row vert-spacer"></div>
 									<div class="row">
-										<div class="col-xxl-4 col-text">
+										<div class="col-4 col-text">
 											<label class="text">Вид платежа:</label>
 										</div>
-										<div class="col-xxl-4">
+										<div class="col-4">
 											<select class="form-select" id="payment-type">
 												<option selected>аннуитетный</option>
 												<option value="1">дифференцированный</option>
 											</select>
 										</div>
-										<div class="col-xxl-4">
+										<div class="col-4">
 
 										</div>
 									</div>
 									<div class="row vert-spacer"></div>
 									<div class="row">
-										<div class="col-xxl-4 col-text">
+										<div class="col-4 col-text">
 											<label class="text">Начало выплат:</label>
 										</div>
-										<div class="col-xxl-2">
+										<div class="col-2">
 											<select class="form-select" id="payment-start-month">
 												<option value="1"selected>Январь</option>
 												<option value="2">Февраль</option>
@@ -174,7 +174,7 @@
 												<option value="12">Декабрь</option>
 											</select>
 										</div>
-										<div class="col-xxl-2">
+										<div class="col-2">
 											<select class="form-select" id="payment-start-year">
 												<option value="1"selected>2024</option>
 												<option value="2">2025</option>
@@ -189,7 +189,7 @@
 												<option value="11">2034</option>
 											</select>
 										</div>
-										<div class="col-xxl-4">
+										<div class="col-4">
 
 										</div>
 									</div>
@@ -214,13 +214,13 @@
 			<div class="row vert-spacer"></div>
 			<div class="row vert-spacer"></div>
 			<div class="row position-relative">
-				<div class="col-4 col-text"> </div>
-				<div class="col-4">
+				<div class="col-3 col-text"> </div>
+				<div class="col-6">
 					<div class="output">
   
 					</div>
 				</div>
-				<div class="col-4"> </div>
+				<div class="col-3"> </div>
 			</div>
 			<div class="row vert-spacer"></div>
 		</div>
@@ -228,18 +228,3 @@
 	<div id="payment-table" style="height:600px ; width: 750px;" class="ag-theme-alpine"></div>
 </body>
 </html>
-
-<div class="row">
-<div class="col-4 col-text">
-<label class="text">Вид платежа:</label>
-</div>
-<div class="col-4">
-<select class="form-select" id="payment-type">
-<option selected>аннуитетный</option>
-<option value="1">дифференцированный</option>
-</select>
-</div>
-<div class="col-4">
-</div>
-</div>
-<div class="row vert-spacer"></div>
