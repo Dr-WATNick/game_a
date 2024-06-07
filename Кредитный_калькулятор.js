@@ -37,7 +37,7 @@ function CalculateClick(){
     output.style.display = "block";
     
     let table = document.createElement("table"); 
-    table.classList.add("resulttable");
+    //table.classList.add("resulttable");
 
     let row = table.insertRow();
     let cell1 = row.insertCell();
