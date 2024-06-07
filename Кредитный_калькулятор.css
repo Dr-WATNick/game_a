@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+input:focus,I 
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.vert-spacer {
+  height: 20px;
+}
+
+.frame {
+  width: 720px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 0 15px #eee;
+  margin: 0 auto;
+  max-width : 1080px;
+}
+
+.col-text{
+	text-align: left;
+}

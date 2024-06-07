@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Кредитный калькулятор</title>
+  <link rel="stylesheet" href="Кредитный_калькулятор.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+	
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src = "Кредитный_калькулятор.js"></script>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="web.html">Web</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link" aria-current="page" href="КалькуляТОР.html">Калькулятор</a>
+					<a class="nav-link active" href="Кредитный_калькулятор.html">Кредитный калькулятор</a>
+					<a class="nav-link" href="game.html">Игра</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<form name ="credit">
+		<div class="container-fluid frame">
+			<div class="row row-cols-12">
+				<div class="row vert-spacer"></div>
+				<div class="row vert-spacer"></div>
+				<div class="row position-relative">
+					
+						<div class="col-fliud position-relative col-text">
+							<label class="text">Cумма кредита:</label>
+						</div>
+						<div class="row">
+							<div class="col-xxl-10">
+								<input type="number" class="form-control" id="credit-amount" value ="300000">
+							</div>
+							<div class="col-xxl-2">
+								<select class="form-select" id="currency-select">
+									<option value="Rub"selected>&#8381;</option>
+									<option value="Do">&#36;</option>
+									<option value="Eu">&#8364;</option>
+								</select>	
+							</div>
+						</div>
+						<div class="row vert-spacer"></div>
+						<div class="col-fliud position-relative col-text">
+							<label class="text">Срок кредита:</label>
+						</div>
+						<div class="row">
+						<div class="col-xxl-10">
+							<input type="number" class="form-control" id="credit-time" value ="24">
+						</div>
+						<div class="col-xxl-2">
+							<select class="form-select" id="credit-time-select">
+								<option value="year" selected>лет</option>
+								<option value="month">мес.</option>
+							</select>
+						</div>
+						</div>
+						<div class="row vert-spacer"></div>
+						<div class="col-fliud position-relative col-text">
+							<label class="text">Процентная ставка:</label>
+						</div>
+						<div class="row">
+						<div class="col-xxl-10">
+							<input type="number" class="form-control" id="interest-rate" value="8.5">
+						</div>
+						<div class="col-xxl-2">
+							<select class="form-select" id="interest-rate-select">
+								<option value="year"selected>% в год</option>
+								<option value="month">% в месяц</option>
+								<option value="day">% в день</option>
+							</select>
+						</div>
+						</div>
+						<div class="row vert-spacer"></div>
+						<div class="row vert-spacer"></div>
+						<div class="row">
+							<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								Дополнительные параметры
+							</button>
+						</div>
+						<div class="row vert-spacer"></div>
+						<div class="row vert-spacer"></div>
+						<div class="collapse" id="collapseExample">
+							<div class="row row-cols-12">
+								<div class="row vert-spacer"></div>
+								<div class="row vert-spacer"></div>
+								<div class="row position-relative">					
+									<div class="col-fliud col-text">
+										<label class="text">Первоначальный взнос:</label>
+									</div>
+									<div class="row">
+										<div class="col-xxl-10">
+											<input type="number" class="form-control" id="initial-payment">
+										</div>
+										<div class="col-xxl-2">
+											<select class="form-select" id="initial-payment-select">
+												<option selected>&#8381;</option>
+												<option value="1">% от суммы кредита</option>
+											</select>	
+										</div>
+									</div>
+									<div class="col-fliud col-text">
+									<div class="row vert-spacer"></div>
+										<label class="text">Единовременные комиссии:</label>
+									</div>
+									<div class="row">
+										<div class="col-xxl-10">
+											<input type="number" class="form-control" id="money-value">
+										</div>
+										<div class="col-xxl-2">
+											<select class="form-select" id="cred-time">
+												<option selected>% от суммы кредита</option>
+												<option value="1">&#8381;</option>
+											</select>
+										</div>
+									</div>
+									<div class="row vert-spacer"></div>
+									<div class="col-fliud col-text">
+										<label class="text">Ежемесячные комиссии:</label>
+									</div>
+									<div class="row">
+										<div class="col-xxl-10">
+											<input type="number" class="form-control" id="one-time-fee">
+										</div>
+										<div class="col-xxl-2">
+											<select class="form-select" id="one-time-fee-select">
+												<option selected>% от суммы кредита</option>
+												<option value="1">% от остатка долга</option>
+												<option value="2">&#8381;</option>
+											</select>
+										</div>
+									</div>
+									<div class="row vert-spacer"></div>
+									<div class="row">
+										<div class="col-xxl-4 col-text">
+											<label class="text">Вид платежа:</label>
+										</div>
+										<div class="col-xxl-4">
+											<select class="form-select" id="payment-type">
+												<option selected>аннуитетный</option>
+												<option value="1">дифференцированный</option>
+											</select>
+										</div>
+										<div class="col-xxl-4">
+
+										</div>
+									</div>
+									<div class="row vert-spacer"></div>
+									<div class="row">
+										<div class="col-xxl-4 col-text">
+											<label class="text">Начало выплат:</label>
+										</div>
+										<div class="col-xxl-2">
+											<select class="form-select" id="payment-start-month">
+												<option value="1"selected>Январь</option>
+												<option value="2">Февраль</option>
+												<option value="3">Март</option>
+												<option value="4">Апрель</option>
+												<option value="5">Май</option>
+												<option value="6">Июнь</option>
+												<option value="7">Июль</option>
+												<option value="8">Август</option>
+												<option value="9">Сентябрь</option>
+												<option value="10">Октябрь</option>
+												<option value="11">Ноябрь</option>
+												<option value="12">Декабрь</option>
+											</select>
+										</div>
+										<div class="col-xxl-2">
+											<select class="form-select" id="payment-start-year">
+												<option value="1"selected>2024</option>
+												<option value="2">2025</option>
+												<option value="3">2026</option>
+												<option value="4">2027</option>
+												<option value="5">2028</option>
+												<option value="6">2029</option>
+												<option value="7">2030</option>
+												<option value="8">2031</option>
+												<option value="9">2032</option>
+												<option value="10">2033</option>
+												<option value="11">2034</option>
+											</select>
+										</div>
+										<div class="col-xxl-4">
+
+										</div>
+									</div>
+									<div class="row vert-spacer"></div>
+									<div class="row vert-spacer"></div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<button class="btn btn-success calculate" type="button">
+								Рассчитать
+							</button>
+						</div>
+						<div class="row vert-spacer"></div>
+						<div class="row vert-spacer"></div>
+				</div>
+			</div>
+			<div class="output">
+  
+			</div>
+			<div id="payment-table" style="height:600px ; width: 750px;" class="ag-theme-alpine"></div>
+		</div>
+	</form>	
+</body>
+</html>
+
